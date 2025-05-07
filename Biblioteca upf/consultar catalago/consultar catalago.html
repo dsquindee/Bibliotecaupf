@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca UPF - Página Principal</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <!-- Logo en el encabezado -->
+        <div class="logo-container">
+            <img class="logo-encabezado" src="/Biblioteca upf inicio/fotos/logo.png" alt="Logo Biblioteca UPF">
+        </div>
+        <h1><a href="/Biblioteca upf inicio/Inicio.html" class="titulo-enlace">Biblioteca UPF</a></h1>
+    
+
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="/consultar catalago/consultar catalago.html">Consultar catálogo</a></li>
+                <li><a href="/Solicitar prestamo/Solicitar prestamo.html">Solicitar préstamo</a></li>
+                <li><a href="/historial de mis prestamos/historial prestamos.html">historial de mis préstamos </a></li>
+                <li><a href="/login/Iniciar sesion/Iniciar sesion.html">Iniciar sesión</a></li>
+                <li><a href="/login/Crear cuenta/Crear cuenta.html">Crear cuenta</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <div class="catalogo">
+
+        <!-- 20 tarjetas -->
+        <div class="tarjeta" onclick="abrirModal(0)"><img src="/consultar catalago/Libros/La sombra del viento.png"><h3>La sombra del viento</h3><p>Laura Martínez</p></div>
+        <div class="tarjeta" onclick="abrirModal(1)"><img src="/consultar catalago/Libros/Reflejos del pasado.png"><h3>Reflejos del pasado</h3><p>David Romero</p></div>
+        <div class="tarjeta" onclick="abrirModal(2)"><img src="/consultar catalago/Libros/La última promesa.png"><h3>La última promesa</h3><p>Elena Torres</p></div>
+        <div class="tarjeta" onclick="abrirModal(3)"><img src="/consultar catalago/Libros/Luz entre ruinas.png"><h3>Luz entre ruinas</h3><p>Andrés Vidal</p></div>
+        <div class="tarjeta" onclick="abrirModal(4)"><img src="/consultar catalago/Libros/El jardin olvidado.png"><h3>El jardín olvidado</h3><p>María Pérez</p></div>
+        <div class="tarjeta" onclick="abrirModal(5)"><img src="/consultar catalago/Libros/Sombras de nieve.png"><h3>Sombras en la nieve</h3><p>Julián Ortega</p></div>
+        <div class="tarjeta" onclick="abrirModal(6)"><img src="/consultar catalago/Libros/Voces del silencio.png"><h3>Voces del silencio</h3><p>Ana Ríos</p></div>
+        <div class="tarjeta" onclick="abrirModal(7)"><img src="/consultar catalago/Libros/El arte de desaparecer.png"><h3>El arte de desaparecer</h3><p>Roberto Salas</p></div>
+        <div class="tarjeta" onclick="abrirModal(8)"><img src="/consultar catalago/Libros/Cartas a un desconocido.png"><h3>Cartas a un desconocido</h3><p>Isabel León</p></div>
+        <div class="tarjeta" onclick="abrirModal(9)"><img src="/consultar catalago/Libros/Fragmentos de luna.png"><h3>Fragmentos de luna</h3><p>Sergio Méndez</p></div>
+        <div class="tarjeta" onclick="abrirModal(10)"><img src="/consultar catalago/Libros/Cronicas del abismo.png"><h3>Crónicas del abismo</h3><p>Daniel Cruz</p></div>
+        <div class="tarjeta" onclick="abrirModal(11)"><img src="/consultar catalago/Libros/Tiempo prestado.png"><h3>Tiempo prestado</h3><p>Nuria Gálvez</p></div>
+        <div class="tarjeta" onclick="abrirModal(12)"><img src="/consultar catalago/Libros/El coleccionista de ecos.png"><h3>El coleccionista de ecos</h3><p>Gabriel Suárez</p></div>
+        <div class="tarjeta" onclick="abrirModal(13)"><img src="/consultar catalago/Libros/El bosque de los susurros.png"><h3>El bosque de los susurros</h3><p>Sofía Lara</p></div>
+        <div class="tarjeta" onclick="abrirModal(14)"><img src="/consultar catalago/Libros/Niebla interior.png"><h3>Niebla interior</h3><p>Fernando Gil</p></div>
+        <div class="tarjeta" onclick="abrirModal(15)"><img src="/consultar catalago/Libros/Horizonte roto.png"><h3>Horizonte roto</h3><p>Lucía Blanco</p></div>
+        <div class="tarjeta" onclick="abrirModal(16)"><img src="/consultar catalago/Libros/Código del alma.png"><h3>Códigos del alma</h3><p>Iván Acosta</p></div>
+        <div class="tarjeta" onclick="abrirModal(17)"><img src="/consultar catalago/Libros/El reloj de arena.png"><h3>El reloj de arena</h3><p>Carmen Reyes</p></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-descripcion"></p>
+        </div>
+    </div>
+
+    <script>
+        const libros = [
+            { titulo: "La sombra del viento", descripcion: "En la Barcelona de posguerra, un joven llamado Daniel descubre un libro olvidado en un misterioso lugar llamado el Cementerio de los Libros Olvidados. Fascinado por la historia y su autor, Julián Carax, comienza una investigación que lo llevará por un camino lleno de secretos, amores perdidos, venganzas antiguas y personajes inolvidables. Cada pista lo acerca más a una verdad enterrada por el tiempo, mientras su vida comienza a entrelazarse peligrosamente con la del autor. La ciudad se convierte en un laberinto de sombras y memorias, donde cada rincón guarda un eco del pasado. Con la ayuda de su inseparable amigo Fermín, Daniel deberá enfrentarse a sus propios miedos para desentrañar un enigma que podría cambiar su destino. Esta es una historia sobre el poder de los libros, la pasión y las heridas que no cicatrizan. Una novela que nos recuerda que hay historias que nos eligen, aunque no lo sepamos." },
+            { titulo: "Reflejos del pasado", descripcion: "En una casa antigua en el campo, Clara hereda un espejo que ha estado en su familia durante generaciones. Pronto descubre que el espejo muestra escenas del pasado: encuentros secretos, despedidas dolorosas y confesiones olvidadas. A medida que Clara se sumerge en las visiones, comienza a reconstruir la historia de su abuela, una mujer fuerte marcada por un amor imposible. El espejo se convierte en una ventana a los errores y sacrificios de quienes la precedieron, pero también en una advertencia de que algunos secretos no deben ser revelados. Clara deberá decidir si romper con la maldición del espejo o abrazar su legado. Una historia donde el tiempo no es lineal y los sentimientos se reflejan en la memoria como en el cristal." },
+            { titulo: "La última promesa", descripcion: "En un pequeño pueblo costero, dos hermanos encuentran una botella con una promesa escrita por ellos mismos cuando eran niños: “Nunca dejaremos de buscar la verdad.” Años después, esa promesa olvidada los impulsa a iniciar un viaje lleno de aventuras y desafíos. Enfrentarán traiciones, desvelarán secretos familiares enterrados y descubrirán que la verdad tiene un precio. La infancia, la lealtad y la fuerza de los lazos fraternos serán puestos a prueba en un viaje que los transformará para siempre. Esta novela es una oda a la memoria, a las promesas que nos marcan y a la valentía de cumplirlas incluso cuando ya no somos los mismos." },
+            { titulo: "Luz entre ruinas", descripcion: "EEn un futuro donde las ciudades han sido devastadas por la guerra y la tecnología, un grupo de exploradores intenta reconstruir la historia perdida de la humanidad. Entre escombros y ruinas, descubren una biblioteca subterránea que guarda los secretos de una era olvidada. Pero no están solos: una inteligencia artificial despierta al notar su presencia y les ofrece conocimiento… a un precio. Mientras luchan por conservar su humanidad en un mundo deshumanizado, los protagonistas descubrirán que no toda luz ilumina y que algunas ruinas deben permanecer en la sombra. Una historia que mezcla ciencia ficción, filosofía y un profundo anhelo por el conocimiento y la verdad." },
+            { titulo: "El jardín olvidado", descripcion: "Cuando Helena hereda una antigua mansión en el sur de Inglaterra, también recibe las llaves de un jardín cerrado con candado. Intrigada, decide restaurarlo y descubre que fue el escenario de un amor prohibido y una tragedia familiar. Entre cartas escondidas, flores marchitas y secretos enterrados, el jardín empieza a devolverle pedazos de su pasado que nunca conoció. La historia se entrelaza entre generaciones, revelando el poder curativo de la naturaleza y la importancia de las raíces. Un lugar donde el tiempo se detiene, y cada flor florece con un suspiro del pasado." },
+            { titulo: "Sombras en la nieve", descripcion: "Durante un retiro invernal en los Alpes, un grupo de amigos se reencuentra después de años sin verse. Lo que comienza como una escapada tranquila pronto se convierte en una pesadilla cuando uno de ellos aparece muerto en la nieve. Aislados por una tormenta, los secretos comienzan a salir a la luz: viejas rencillas, amores ocultos y una traición que marcó sus vidas. Cada uno tiene algo que ocultar y el asesino podría estar entre ellos. Una novela de suspense psicológico donde la nieve no solo cubre el paisaje, sino también las verdades más oscuras del alma." },
+            { titulo: "Voces del silencio", descripcion: "Marta, una periodista de investigación, comienza a seguir la pista de una activista desaparecida en circunstancias misteriosas. Lo que parecía un caso más se convierte en una red peligrosa de corrupción, poder y silencio. Mientras desenreda los hilos, Marta se enfrenta a su propio pasado, a las decisiones que marcaron su carrera y a las voces de aquellos que fueron callados. La ayuda de un joven hacker y una fuente anónima le permitirán acercarse a una verdad que podría costarle la vida. Una historia intensa sobre la lucha por la justicia y la necesidad de romper el silencio." },
+            { titulo: "El arte de desaparecer", descripcion: "Alessio, un maestro del ilusionismo, realiza el mayor truco de su carrera: desaparecer sin dejar rastro en plena actuación. Su hija Clara, convencida de que no es solo un truco, inicia una búsqueda que la lleva a descubrir los rincones más oscuros del pasado de su padre. Encuentra un diario secreto, lleno de pistas y confesiones, que la lleva por un viaje emocional y físico a través de la magia, el engaño y el dolor. Una historia sobre el deseo de huir del mundo, las heridas que se esconden tras una sonrisa y el poder del recuerdo para devolver la verdad." },
+            { titulo: "Cartas a un desconocido", descripcion: "Isabel, bibliotecaria en una pequeña ciudad, comienza a recibir cartas anónimas dejadas entre las páginas de los libros. Al principio son simples recuerdos, pero pronto se transforman en confesiones íntimas y relatos de un amor prohibido ocurrido décadas atrás. A medida que trata de descubrir al autor, Isabel se ve arrastrada a una historia que resuena con su propia vida y sus decisiones amorosas. Lo que empieza como un juego literario se convierte en una experiencia transformadora que cambiará su visión del amor, la soledad y el destino." },
+            { titulo: "Fragmentos de luna", descripcion: "Una antología poética que entrelaza recuerdos, sueños, despedidas y anhelos. Cada poema es un reflejo de un instante perdido, de un amor no dicho, de una melancolía que habita en la piel. Las palabras flotan como fragmentos de luna sobre un mar de emociones, iluminando las noches oscuras del alma. Un viaje lírico que invita a detenerse, respirar y mirar hacia dentro. Ideal para quienes encuentran en la poesía un refugio y una forma de entender el mundo." },
+            { titulo: "Crónicas del abismo", descripcion: "Bajo las profundidades del océano Atlántico, una civilización ancestral sobrevive desde hace milenios. Cuando una expedición científica la descubre, se desata una batalla entre dos mundos: uno regido por la tecnología y otro por la sabiduría ancestral. Los protagonistas deberán tomar decisiones difíciles que pondrán a prueba su moral, su lealtad y su humanidad. Esta novela mezcla mitología, ciencia y acción en una historia épica que cuestiona el papel del ser humano en la Tierra y en el universo." },
+            { titulo: "Tiempo prestado", descripcion: "Cada mañana, Samuel despierta en un año diferente de su vida. A veces es un niño, otras un anciano. Al principio cree que está perdiendo la razón, pero pronto entiende que tiene una oportunidad única para cambiar su destino, enmendar errores y decir lo que nunca se atrevió. Pero el tiempo, incluso el prestado, tiene un límite. Una historia conmovedora sobre el arrepentimiento, las segundas oportunidades y el valor de cada instante." },
+            { titulo: "El coleccionista de ecos", descripcion: "Tras la muerte de su esposa, Elías recorre el mundo con una grabadora antigua, capturando los susurros del viento, los ecos de las calles, las voces del pasado. Cree que si graba lo suficiente, podrá revivir un momento con ella. Cada grabación es un poema sonoro, un intento de inmortalizar lo efímero. Esta novela introspectiva y poética es un homenaje al amor eterno, al duelo y a la memoria que se conserva en lo invisible." },
+            { titulo: "El bosque de los susurros", descripcion: "Una niña llamada Elina entra en un bosque que nadie se atreve a visitar. Allí, los árboles hablan con voces antiguas, susurrando secretos y verdades olvidadas. A medida que se adentra, descubre que el bosque guarda los recuerdos de todos los que han pasado por él. La niña deberá enfrentarse a su miedo y aceptar una verdad que cambiará su vida. Una fábula moderna sobre la naturaleza, el coraje y el poder de escuchar con el corazón." },
+            { titulo: "Niebla interior", descripcion: "Una colección de relatos que exploran los rincones más profundos de la mente humana. Ansiedad, duelo, amor no correspondido, esperanza… Cada historia es un viaje emocional que atraviesa la oscuridad para encontrar una chispa de luz. Con un estilo íntimo y reflexivo, estos relatos invitan al lector a reconocerse en las páginas, a enfrentar sus propias nieblas y a abrazar su vulnerabilidad como fuerza." },
+            { titulo: "Horizonte roto", descripcion: "En una Tierra destruida por errores humanos, los sobrevivientes viven fragmentados en islas flotantes. La protagonista, Naia, sueña con reconstruir un mundo unido. Cuando encuentra una nave olvidada que puede viajar entre los fragmentos, comienza una odisea por reencontrar a la humanidad. Ciencia ficción con corazón, esta novela plantea preguntas sobre el futuro, la resiliencia y la posibilidad de redención" },
+            { titulo: "Códigos del alma", descripcion: "Lina es una joven hacker que descubre por accidente una red secreta que afirma poder descifrar digitalmente el alma humana. Fascinada, empieza a experimentar con los códigos y a encontrar patrones emocionales en los datos. Pero pronto se da cuenta de que lo que ha descubierto puede ser usado para controlar o liberar a la humanidad. Filosofía, tecnología y emoción se mezclan en una historia de identidad, ética y rebelión." },
+            { titulo: "El reloj de arena", descripcion: "Un anciano recibe un reloj mágico que le da 24 horas para corregir un solo error del pasado. Mientras la arena cae, debe decidir qué cambiar: una palabra no dicha, una despedida, un fracaso. En su viaje contra el tiempo, se reencontrará con personas y decisiones que marcaron su vida. Un cuento profundo y humano sobre la importancia del presente, la aceptación y el poder del perdón." },
+        ];
+
+        function abrirModal(index) {
+            document.getElementById("modal-titulo").textContent = libros[index].titulo;
+            document.getElementById("modal-descripcion").textContent = libros[index].descripcion;
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+
+    
+
+
+
+
+
+
+   
+    <!-- pie abajo -->
+
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-links">
+                <li><a href="/politica-privacidad.html">2025 Biblioteca UPF</a></li>
+                <li><a href="/politicas/Politicas de privacidad.html">Política de Privacidad</a></li>
+                <li><a href="/politicas/Aviso legal.html">Aviso Legal</a></li>
+                <li><a href="/politicas/Proteccion de datos.html">Protección de Datos</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- pie abajo -->
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

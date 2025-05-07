@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca UPFU - Acceso</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="form-container">
+            <h1>Iniciar sesión en Biblioteca UPFU</h1>
+
+            <!-- Formulario de inicio de sesión -->
+            <form action="/login" method="POST">
+                <input type="email" class="input-field" placeholder="Correo electrónico" name="email" required />
+                <input type="password" class="input-field" placeholder="Contraseña" name="password" required />
+
+                <button type="submit" class="boton login">Iniciar sesión</button>
+            </form>
+
+            <!-- Enlace para recuperar la contraseña -->
+            <a href="/recuperar-contrasena" class="link recuperar">¿Olvidaste tu contraseña?</a>
+
+            <a href="/login/Crear cuenta/Crear cuenta.html" class="boton registro">Crear cuenta</a>
+        </div>
+    </div>
+</body>
+
+</html>
